@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Download, send } from "lucide-react";
+import { Download, Send } from "lucide-react";
 import {
   RiBriefcase4Fill,
   RiTeamFill,
@@ -24,7 +24,12 @@ const Hero = () => {
             <p className="subtitle mx-w-[490px] mx-auto xl:mx-0">Brief description with insights into myself, my vocational 
                 journey, and what I engage in professionaly.
             </p>
-            <div>buttons</div>
+            <div className="flex flex-col gap-y-3 md:flex-row  gap-x-3 mx-auto xl:mx-0 mb-12">
+              <Link href="/contacts">
+                <Button className="gap-x-2">contact me <Send size={18}/></Button>
+              </Link>
+              <Button variant="secondary" className="gap-x-2">Download CV <Download size={18}/></Button>
+            </div>
           </div>
           <div className="hidden xl:flex relative">Image</div>
         </div>
